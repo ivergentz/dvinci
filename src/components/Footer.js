@@ -40,7 +40,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://github.com/ivergentz/"
+          href="https://github.com/ivergentz/dvinci"
         >
           <Icon icon={faGithub}></Icon>
         </a>
