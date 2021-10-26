@@ -5,7 +5,7 @@ const SupportSection = ({ entries }) => {
   return (
     <Container>
       <Header>
-        <span className="header__bg">Unterstützt mich!</span>
+        <span className="header__bg">Unterstützt mich bei:</span>
       </Header>
       {entries.map(entry => (
         <SupportWrapper key={entry.id}>
