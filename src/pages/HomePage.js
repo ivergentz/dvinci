@@ -15,10 +15,6 @@ import { supportEntries } from '../components/SupportSection/data'
 import SupportSection from '../components/SupportSection/SupportSection'
 
 const HomePage = () => {
-  console.log(email)
-  console.log(subject)
-  console.log(body)
-
   return (
     <>
       <Header email={email} subject={subject} body={body} />

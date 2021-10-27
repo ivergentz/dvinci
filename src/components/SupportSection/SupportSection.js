@@ -8,8 +8,6 @@ const SupportSection = ({ entries }) => {
   const firstItems = entries.slice(0, firstSize)
   const secondItems = entries.slice(2, secondSize)
 
-  console.log(secondItems)
-
   return (
     <>
       <Container>
@@ -22,25 +20,21 @@ const SupportSection = ({ entries }) => {
 
           <Row>
             {firstItems.map(entry => (
-              <>
-                <SupportWrapper key={entry.id}>
-                  <SupportSymbol src={entry.img} alt="symbol picture" />
-                  <SupportHeader>{entry.head}</SupportHeader>
-                  <SupportText>{entry.text}</SupportText>
-                </SupportWrapper>
-              </>
+              <SupportWrapper key={entry.id}>
+                <SupportSymbol src={entry.img} alt="symbol picture" />
+                <SupportHeader>{entry.head}</SupportHeader>
+                <SupportText>{entry.text}</SupportText>
+              </SupportWrapper>
             ))}
           </Row>
 
           <Row>
             {secondItems.map(entry => (
-              <>
-                <SupportWrapper key={entry.id}>
-                  <SupportSymbol src={entry.img} alt="symbol picture" />
-                  <SupportHeader>{entry.head}</SupportHeader>
-                  <SupportText>{entry.text}</SupportText>
-                </SupportWrapper>
-              </>
+              <SupportWrapper key={entry.id}>
+                <SupportSymbol src={entry.img} alt="symbol picture" />
+                <SupportHeader>{entry.head}</SupportHeader>
+                <SupportText>{entry.text}</SupportText>
+              </SupportWrapper>
             ))}
           </Row>
         </div>
