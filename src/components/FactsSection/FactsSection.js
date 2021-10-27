@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import backgroundImg from '../../images/backgroundImg.svg'
 import checkedCheckmark from '../../images/checkedCheckmark.svg'
-import placeholderImg from '../../images/iver.png'
+import portrait from '../../images/iver.png'
 import play from '../../images/play.svg'
 import uncheckedCheckmark from '../../images/uncheckedCheckmark.svg'
 
@@ -11,7 +11,7 @@ const FactsSection = ({ entries }) => {
     <>
       <SectionListContainer>
         <FactsBg src={backgroundImg} alt="placeholder">
-          <img src={placeholderImg} alt="placeholder" />
+          <img src={portrait} alt="placeholder" />
         </FactsBg>
         <FactsWithHeader>
           <FactsHeader>
@@ -108,6 +108,7 @@ const FactsBg = styled.div`
       margin-top: -5vh;
       margin-left: 15vh;
       transform: rotate(-3deg);
+      border-radius: 15px;
     }
 
     @media (min-width: 1200px) {
