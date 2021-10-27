@@ -1,20 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const firstSize = 2
+const secondSize = 4
+
 const SupportSection = ({ entries }) => {
+  const firstItems = entries.slice(0, firstSize)
+  const secondItems = entries.slice(2, secondSize)
+
+  console.log(secondItems)
+
   return (
-    <Container>
-      <Header>
-        <span className="header__bg">Unterstützt mich bei:</span>
-      </Header>
-      {entries.map(entry => (
-        <SupportWrapper key={entry.id}>
-          <SupportSymbol src={entry.img} alt="symbol picture" />
-          <SupportHeader>{entry.head}</SupportHeader>
-          <SupportText>{entry.text}</SupportText>
-        </SupportWrapper>
-      ))}
-    </Container>
+    <>
+      <Container>
+        <div className="flex">
+          <Row>
+            <Header>
+              <span className="header__bg">Unterstützt mich bei:</span>
+            </Header>
+          </Row>
+
+          <Row>
+            {firstItems.map(entry => (
+              <>
+                <SupportWrapper key={entry.id}>
+                  <SupportSymbol src={entry.img} alt="symbol picture" />
+                  <SupportHeader>{entry.head}</SupportHeader>
+                  <SupportText>{entry.text}</SupportText>
+                </SupportWrapper>
+              </>
+            ))}
+          </Row>
+
+          <Row>
+            {secondItems.map(entry => (
+              <>
+                <SupportWrapper key={entry.id}>
+                  <SupportSymbol src={entry.img} alt="symbol picture" />
+                  <SupportHeader>{entry.head}</SupportHeader>
+                  <SupportText>{entry.text}</SupportText>
+                </SupportWrapper>
+              </>
+            ))}
+          </Row>
+        </div>
+      </Container>
+    </>
   )
 }
 
@@ -23,17 +54,19 @@ export default SupportSection
 const Container = styled.section`
   background: #143a5a;
   color: #fff;
-  width: 90%;
+  width: 100%;
   margin: 3rem auto;
   padding: 0 1.5rem;
+  padding-bottom: 3rem;
 
-  @media (min-width: 768px) {
-    position: relative;
-    width: 100vw;
-    margin: 10vh auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  .flex {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-top: 6rem;
   }
 `
 
@@ -47,6 +80,18 @@ const Header = styled.h3`
     background: #f4e287;
     padding: 0.5rem;
     font-size: 1.2rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+`
+
+const Row = styled.div`
+  display: flex;
+
+  @media (max-width: 768px) {
+    display: grid;
   }
 `
 
@@ -56,8 +101,12 @@ const SupportSymbol = styled.img`
 `
 
 const SupportWrapper = styled.div`
-  :last-child {
-    padding-bottom: 2rem;
+  width: 50%;
+  padding-left: 1rem;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `
 
