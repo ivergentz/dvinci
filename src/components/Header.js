@@ -3,11 +3,8 @@ import styled from 'styled-components'
 
 const heading = 'i.gentz'
 const btntext = 'CV'
-const email = 'ivergentz@posteo.de'
-const subject = '🤗'
-const body = 'eigener Text'
 
-const Header = () => {
+const Header = email => {
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = () => {
@@ -22,7 +19,9 @@ const Header = () => {
     <>
       <LogoContainer onScroll={scrollNav ? setScrollNav : undefined}>
         <NavLogo
-          href={`mailto:${email}?subject=${subject || ''}&body=${body || ''}`}
+          href={`mailto:${email.email}?subject=${email.subject || ''}&body=${
+            email.body || ''
+          }`}
         >
           {heading}
         </NavLogo>

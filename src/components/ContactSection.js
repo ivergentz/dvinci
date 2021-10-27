@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import iver from '../images/iver.png'
 
-const email = 'ivergentz@posteo.de'
-const subject = '🤗'
-const body = 'eigener Text'
-
-const ContactSection = () => {
+const ContactSection = email => {
   return (
     <Container>
       <Header>
@@ -28,9 +24,9 @@ const ContactSection = () => {
           </ContactLine>
           <ContactLine>
             <a
-              href={`mailto:${email}?subject=${subject || ''}&body=${
-                body || ''
-              }`}
+              href={`mailto:${email.email}?subject=${
+                email.subject || ''
+              }&body=${email.body || ''}`}
             >
               ivergentz@posteo.de
             </a>

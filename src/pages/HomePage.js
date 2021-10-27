@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContactSection from '../components/ContactSection'
+import { body, email, subject } from '../components/email'
 import { expectEntries } from '../components/ExpectSection/data'
 import ExpectSection from '../components/ExpectSection/ExpectSection'
 import { factEntries } from '../components/FactsSection/data'
@@ -14,9 +15,13 @@ import { supportEntries } from '../components/SupportSection/data'
 import SupportSection from '../components/SupportSection/SupportSection'
 
 const HomePage = () => {
+  console.log(email)
+  console.log(subject)
+  console.log(body)
+
   return (
     <>
-      <Header />
+      <Header email={email} subject={subject} body={body} />
       <Container>
         <JobSection />
         <FactsSection entries={factEntries} />
@@ -25,9 +30,9 @@ const HomePage = () => {
       </Container>
       <SupportSection entries={supportEntries} />
       <Container>
-        <ContactSection />
+        <ContactSection email={email} subject={subject} body={body} />
       </Container>
-      <Footer />
+      <Footer email={email} subject={subject} body={body} />
     </>
   )
 }

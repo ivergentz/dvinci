@@ -8,11 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 
-const email = 'ivergentz@posteo.de'
-const subject = '🤗'
-const body = 'eigener Text'
-
-const Footer = () => {
+const Footer = email => {
   return (
     <Container>
       <div className="footerResp">
@@ -48,7 +44,9 @@ const Footer = () => {
         </SocialIcons>
         <FooterText>
           <a
-            href={`mailto:${email}?subject=${subject || ''}&body=${body || ''}`}
+            href={`mailto:${email.email}?subject=${email.subject || ''}&body=${
+              email.body || ''
+            }`}
           >
             i.gentz
           </a>
