@@ -14,7 +14,7 @@ const SupportSection = ({ entries }) => {
         <div className="flex">
           <Row>
             <Header>
-              <span className="header__bg">Unterstützt mich bei:</span>
+              <span className="header__bg">Unterstützt mich:</span>
             </Header>
           </Row>
 

@@ -7,26 +7,26 @@ import sun from '../../images/sun.svg'
 export const supportEntries = [
   {
     id: uuid4(),
-    head: '...ich kann aufsteigen und losfahren',
-    text: 'Das Rennrad ist der nächste Schritt. Gern auch Downhill',
+    head: '...bei meiner Fahrt als Developer.',
+    text: 'Lasst uns gemeinsam Gas geben!',
     img: bike,
   },
   {
     id: uuid4(),
-    head: '...beim Aufgehen meiner Sonne',
-    text: 'Ganz schön schwierig sich hier immer einen guten Spruch auszudenken',
+    head: '...bei meinen Arbeitsbedingungen.',
+    text: 'Höhenverstellbarer Tisch ist super. Anteilig remote natürlich auch.',
     img: sun,
   },
   {
     id: uuid4(),
-    head: '...bei meiner Weiterentwicklung',
-    text: 'Danach können wir über Urlaub reden',
+    head: '...zuerst bei meiner Weiterentwicklung.',
+    text: 'Danach können wir über Urlaub reden!',
     img: smiley,
   },
   {
     id: uuid4(),
-    head: '...lasst mich durchstarten',
-    text: 'Ich habe Lust den nächsten Karrierschritt zu gehen',
+    head: '...lasst mich mit euch durchstarten.',
+    text: 'Ich habe Lust den nächsten Karrierschritt zu gehen!',
     img: rocket,
   },
 ]

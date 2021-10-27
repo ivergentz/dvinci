@@ -9,8 +9,10 @@ const ContactSection = email => {
         <span className="header__bg">Klingt gut?</span>
       </Header>
       <ContactText>
-        Dann macht euch ein umfassendes Bild unter <i>CV</i>, oder genehmigt
-        euch einen Blick auf meine <i>Zeugnisse</i>. <br />
+        Dann macht euch ein umfassendes Bild von mir unter <i>CV</i>,{' '}
+        <i>Zeugnisse</i> oder dem{' '}
+        <i>github-Link und dem Source Code dieser Seite</i> im Footer!
+        <br />
         <br /> Freue mich über eine Antwort von euch!
       </ContactText>
       <div className="flex">
